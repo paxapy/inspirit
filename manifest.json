@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Internet Spirit",
+  "description": "Welcome to the internet, username",
+  "version": "1.42",
+
+  "browser_action": {
+   "default_icon": "logo.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab", "tabs", "storage", "http://*.yandex.ru/"
+  ],
+  "background": {
+    "scripts": ["static/js/jquery.min.js", "static/lib/jqterminal/jqterminal.min.js", "background.js"],
+    "persistent": false
+  }
+}
