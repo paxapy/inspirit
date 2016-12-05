@@ -46,14 +46,14 @@ chrome.storage.sync.get(function (data) {
 $(function () {
     getQueries();
     $('#terminal').terminal(function(input, term) {
-        currentInput += ' ' + input;
+        currentInput += input + ' ';
+        if (input === "I'm feeling lucky") {
+            weDone(currentInput)
+        }
         if (tries === 0 && tabsCount) {
             term.echo('Я показал тебе чуть менее чем ' + tabsCount + ' интернетов')
-        }
-        if (tries % 7 === 0) {
+        } else if (tries % 7 === 0) {
             term.echo('Иногда мне везет')
-        } else if (input === "I'm feeling lucky") {
-            weDone(currentInput)
         } else if (input === 'help') {
             term.echo('Расскажи мне что-нибудь и что-нибудь расскажу тебе я')
         } else if (weGood(currentInput + input)) {

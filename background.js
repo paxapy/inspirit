@@ -14,7 +14,6 @@ chrome.tabs.onActivated.addListener(function() {
     chrome.storage.sync.get(function (data) {
         var count = data.tabsCount || 0;
         var nextTime = data.nextTime || count;
-        console.log(count, nextTime);
         chrome.storage.sync.set({'tabsCount': count += 1});
         if (count > nextTime) {
             data.wedone = false;
