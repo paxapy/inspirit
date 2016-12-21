@@ -16,7 +16,7 @@ chrome.tabs.onActivated.addListener(function() {
         var nextTime = data.nextTime || count;
         chrome.storage.sync.set({'tabsCount': count += 1});
         if (count > nextTime) {
-            //data.wedone = false;
+            data.wedone = false;
         }
         !data.wedone && focusOnSpirit()
     });
