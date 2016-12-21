@@ -1,5 +1,11 @@
+* {margin: 0; padding: 0;}
+
+body {background: black;}
+canvas {display: block;}
+
 #edward {
     color: #009a00;
     text-align: center;
     display: none;
 }
+

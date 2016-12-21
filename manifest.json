@@ -13,7 +13,7 @@
    "activeTab", "tabs", "storage", "http://*.yandex.ru/"
   ],
   "background": {
-    "scripts": ["static/js/jquery.min.js", "static/lib/jqterminal/jqterminal.min.js", "background.js"],
+    "scripts": ["static/js/jquery.min.js", "static/js/twit.js", "static/lib/jqterminal/jqterminal.min.js", "background.js"],
     "persistent": false
   }
 }
